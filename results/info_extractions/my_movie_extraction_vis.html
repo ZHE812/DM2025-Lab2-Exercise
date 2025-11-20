@@ -1,0 +1,259 @@
+<style>
+.lx-highlight { position: relative; border-radius:3px; padding:1px 2px;}
+.lx-highlight .lx-tooltip {
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.2s ease-in-out;
+  background: #333;
+  color: #fff;
+  text-align: left;
+  border-radius: 4px;
+  padding: 6px 8px;
+  position: absolute;
+  z-index: 1000;
+  bottom: 125%;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 12px;
+  max-width: 240px;
+  white-space: normal;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+.lx-highlight:hover .lx-tooltip { visibility: visible; opacity:1; }
+.lx-animated-wrapper { max-width: 100%; font-family: Arial, sans-serif; }
+.lx-controls {
+  background: #fafafa; border: 1px solid #90caf9; border-radius: 8px;
+  padding: 12px; margin-bottom: 16px;
+}
+.lx-button-row {
+  display: flex; justify-content: center; gap: 8px; margin-bottom: 12px;
+}
+.lx-control-btn {
+  background: #4285f4; color: white; border: none; border-radius: 4px;
+  padding: 8px 16px; cursor: pointer; font-size: 13px; font-weight: 500;
+  transition: background-color 0.2s;
+}
+.lx-control-btn:hover { background: #3367d6; }
+.lx-progress-container {
+  margin-bottom: 8px;
+}
+.lx-progress-slider {
+  width: 100%; margin: 0; appearance: none; height: 6px;
+  background: #ddd; border-radius: 3px; outline: none;
+}
+.lx-progress-slider::-webkit-slider-thumb {
+  appearance: none; width: 18px; height: 18px; background: #4285f4;
+  border-radius: 50%; cursor: pointer;
+}
+.lx-progress-slider::-moz-range-thumb {
+  width: 18px; height: 18px; background: #4285f4; border-radius: 50%;
+  cursor: pointer; border: none;
+}
+.lx-status-text {
+  text-align: center; font-size: 12px; color: #666; margin-top: 4px;
+}
+.lx-text-window {
+  font-family: monospace; white-space: pre-wrap; border: 1px solid #90caf9;
+  padding: 12px; max-height: 260px; overflow-y: auto; margin-bottom: 12px;
+  line-height: 1.6;
+}
+.lx-attributes-panel {
+  background: #fafafa; border: 1px solid #90caf9; border-radius: 6px;
+  padding: 8px 10px; margin-top: 8px; font-size: 13px;
+}
+.lx-current-highlight {
+  border-bottom: 4px solid #ff4444;
+  font-weight: bold;
+  animation: lx-pulse 1s ease-in-out;
+}
+@keyframes lx-pulse {
+  0% { text-decoration-color: #ff4444; }
+  50% { text-decoration-color: #ff0000; }
+  100% { text-decoration-color: #ff4444; }
+}
+.lx-legend {
+  font-size: 12px; margin-bottom: 8px;
+  padding-bottom: 8px; border-bottom: 1px solid #e0e0e0;
+}
+.lx-label {
+  display: inline-block;
+  padding: 2px 4px;
+  border-radius: 3px;
+  margin-right: 4px;
+  color: #000;
+}
+.lx-attr-key {
+  font-weight: 600;
+  color: #1565c0;
+  letter-spacing: 0.3px;
+}
+.lx-attr-value {
+  font-weight: 400;
+  opacity: 0.85;
+  letter-spacing: 0.2px;
+}
+
+/* Add optimizations with larger fonts and better readability for GIFs */
+.lx-gif-optimized .lx-text-window { font-size: 16px; line-height: 1.8; }
+.lx-gif-optimized .lx-attributes-panel { font-size: 15px; }
+.lx-gif-optimized .lx-current-highlight { text-decoration-thickness: 4px; }
+</style>
+    <div class="lx-animated-wrapper lx-gif-optimized">
+      <div class="lx-attributes-panel">
+        <div class="lx-legend">Highlights Legend: <span class="lx-label" style="background-color:#D2E3FC;">audience_impact</span> <span class="lx-label" style="background-color:#C8E6C9;">opinion_statement</span></div>
+        <div id="attributesContainer"></div>
+      </div>
+      <div class="lx-text-window" id="textWindow">
+        **Page 1**
+&quot;&quot;&quot;
+A Timeless and Moving Experience: 
+Thoughts on Forrest Gump 
+By Lin Shiyu Updated: 2024/09/14 | Published: 2023/09/14 
+Released in 1994, Forrest Gump was a title frequently mentioned throughout my 
+childhood and teenage years. I may have had several opportunities to watch it back 
+then, but perhaps due to my age, I couldn&#x27;t recall many details. As an adult, I 
+constantly saw short commentary videos explaining the film, which suddenly sparked 
+a determination to watch it properly. I wanted to cast aside second-hand 
+interpretations and <span class="lx-highlight lx-current-highlight" data-idx="0" style="background-color:#D2E3FC;">seek the most direct, first-hand emotional experience</span>. 
+To briefly touch upon my objective view of the film: as a biopic, Forrest Gump 
+portrays its protagonist with <span class="lx-highlight" data-idx="1" style="background-color:#C8E6C9;">enough detail and charm to <span class="lx-highlight" data-idx="2" style="background-color:#D2E3FC;">make him genuinely likeable 
+and relatable</span></span>. The film <span class="lx-highlight" data-idx="3" style="background-color:#C8E6C9;">cleverly integrates major U.S. historical events, <span class="lx-highlight" data-idx="4" style="background-color:#D2E3FC;">adding a sense 
+of time and entertainment value</span></span>. It <span class="lx-highlight" data-idx="5" style="background-color:#C8E6C9;"><span class="lx-highlight" data-idx="6" style="background-color:#D2E3FC;">makes Gump feel like someone we might actually 
+know</span></span>—someone experiencing this absurd yet authentic reality just as we do. <span class="lx-highlight" data-idx="7" style="background-color:#C8E6C9;">The 
+passage of time has not dimmed the brilliance of Forrest Gump</span>; <span class="lx-highlight" data-idx="8" style="background-color:#C8E6C9;">the care put into the 
+plot and dialogue by the screenwriter and director ensures that this 20-year-old film 
+<span class="lx-highlight" data-idx="9" style="background-color:#D2E3FC;">still shines brightly today</span></span>. 
+Having covered the objective aspects, I want to share my most intuitive feelings. In 
+the straightforward narrative, <span class="lx-highlight" data-idx="10" style="background-color:#C8E6C9;">Gump’s life seems filled with explosive events</span>. Yet, in 
+Gump&#x27;s eyes, these are simply part of his consistent attitude toward life—an attitude 
+he holds for decades. <span class="lx-highlight" data-idx="11" style="background-color:#D2E3FC;">This is something we can reflect upon for ourselves</span>: choose 
+with your heart and walk steadily forward, and the world will eventually open a path 
+for you. 
+That <span class="lx-highlight" data-idx="12" style="background-color:#C8E6C9;">Gump possesses such a positive philosophy of life</span> is inseparable from his 
+mother&#x27;s upbringing. <span class="lx-highlight" data-idx="13" style="background-color:#C8E6C9;">This was my most profound realization upon rewatching the 
+movie years later</span>. I believe that as we grow older, <span class="lx-highlight" data-idx="14" style="background-color:#D2E3FC;">we become increasingly aware of 
+how much family education influences an individual</span>. If Gump’s mother had viewed 
+him as a burden, constantly belittled him, or deemed him unfit for society, his spirit 
+would have gradually withered in the gloom of childhood, regardless of his natural 
+aptitude. A withered soul struggles to even nurture itself, let alone achieve success. 
+<span class="lx-highlight" data-idx="15" style="background-color:#C8E6C9;">Forrest Gump is undoubtedly a masterclass in storytelling</span>. <span class="lx-highlight" data-idx="16" style="background-color:#C8E6C9;">It depicts a life that is 
+inspirational, entertaining, and full of drama</span>—<span class="lx-highlight" data-idx="17" style="background-color:#C8E6C9;">a high-quality film that is both popular</span>
+&quot;&quot;&quot;
+
+**Page 2**
+&quot;&quot;&quot;
+with audiences and educational. However, from my perspective, I couldn&#x27;t help but 
+have some new thoughts. Jenny, as a supporting character, appears with a frequency 
+that makes her impossible to ignore, even if we aren&#x27;t meant to focus too heavily on 
+her movements. Based on this, <span class="lx-highlight" data-idx="18" style="background-color:#C8E6C9;">I feel the screenwriter was somewhat lazy in 
+characterizing Jenny</span>. <span class="lx-highlight" data-idx="19" style="background-color:#C8E6C9;">She acts merely as a synchronized character in a parallel 
+timeline; her growth has limited relevance to Gump, yet she always appears exactly 
+when Gump &quot;needs&quot; her</span>. Although it feels like the writer tried to give Jenny multiple 
+facets while keeping her gentle, <span class="lx-highlight" data-idx="20" style="background-color:#C8E6C9;">there is an unavoidable suspicion that she was used 
+merely as a &quot;plot device</span>.&quot; 
+This inference stems from the scene where Jenny bears Gump’s child. I wonder if the 
+screenwriter felt Gump had to have a child for the story to be complete, thus requiring 
+Jenny to &quot;complete the assignment&quot; with Gump at the last moment. The intention to 
+force a happy ending felt a bit excessive; <span class="lx-highlight" data-idx="21" style="background-color:#C8E6C9;">I consider this a rather confusing storyline 
+within the movie</span>. 
+Another point that bothered me was the scene where Gump&#x27;s mother engages in a 
+sexual transaction with the principal to get Gump into school. <span class="lx-highlight" data-idx="22" style="background-color:#C8E6C9;">I</span> pondered this for a 
+long time and still don&#x27;t quite understand its significance. Aside from dark humor or 
+highlighting the mother&#x27;s sacrifice (?), <span class="lx-highlight" data-idx="23" style="background-color:#C8E6C9;">I fail to see any deeper meaning</span>. As a female 
+viewer, <span class="lx-highlight" data-idx="24" style="background-color:#D2E3FC;">watching such a depiction felt somewhat off-putting (uncomfortable</span>). 
+However, the <span class="lx-highlight" data-idx="25" style="background-color:#C8E6C9;">flaws do not obscure the jade</span>—<span class="lx-highlight" data-idx="26" style="background-color:#C8E6C9;">I don&#x27;t feel it ruined the entire movie</span>. 
+These are my thoughts on Forrest Gump. I believe this film <span class="lx-highlight" data-idx="27" style="background-color:#C8E6C9;">will continue to influence 
+people deeply in the future</span>. It is <span class="lx-highlight" data-idx="28" style="background-color:#C8E6C9;">well worth watching</span> when you need strength. We are 
+all ordinary people; excessive &quot;chicken soup&quot; (motivational platitudes) can make us 
+lose our way, but <span class="lx-highlight" data-idx="29" style="background-color:#C8E6C9;">a story told gently and calmly takes root in our hearts and endures 
+endlessly</span>. Forrest Gump <span class="lx-highlight" data-idx="30" style="background-color:#C8E6C9;">is exactly that kind of movie</span>. 
+
+References 
+Lin, Shiyu. &quot;歷久彌新的感動：《阿甘正傳》觀後感&quot; [A Timeless and Moving 
+Experience: Thoughts on Forrest Gump]. Vocus, 14 Sep. 2023, 
+https://vocus.cc/article/6501dafffd897800015ea294. Accessed 19 Nov. 2025.
+&quot;&quot;&quot;
+
+
+      </div>
+      <div class="lx-controls">
+        <div class="lx-button-row">
+          <button class="lx-control-btn" onclick="playPause()">▶️ Play</button>
+          <button class="lx-control-btn" onclick="prevExtraction()">⏮ Previous</button>
+          <button class="lx-control-btn" onclick="nextExtraction()">⏭ Next</button>
+        </div>
+        <div class="lx-progress-container">
+          <input type="range" id="progressSlider" class="lx-progress-slider"
+                 min="0" max="30" value="0"
+                 onchange="jumpToExtraction(this.value)">
+        </div>
+        <div class="lx-status-text">
+          Entity <span id="entityInfo">1/31</span> |
+          Pos <span id="posInfo">[722-791]</span>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      (function() {
+        const extractions = [{"index": 0, "class": "audience_impact", "text": "seek the most direct, first-hand emotional experience", "color": "#D2E3FC", "startPos": 556, "endPos": 609, "beforeText": "ary videos explaining the film, which suddenly sparked \na determination to watch it properly. I wanted to cast aside second-hand \ninterpretations and ", "extractionText": "seek the most direct, first-hand emotional experience", "afterText": ". \nTo briefly touch upon my objective view of the film: as a biopic, Forrest Gump \nportrays its protagonist with enough detail and charm to make him g", "attributesHtml": "<div><strong>class:</strong> audience_impact</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">emotion_evoked</span>: <span class=\"lx-attr-value\">emotional</span>, <span class=\"lx-attr-key\">causal_element</span>: <span class=\"lx-attr-value\">The film</span>, <span class=\"lx-attr-key\">target_audience</span>: <span class=\"lx-attr-value\">the reviewer</span>}</div>"}, {"index": 1, "class": "opinion_statement", "text": "enough detail and charm to make him genuinely likeable and relatable", "color": "#C8E6C9", "startPos": 722, "endPos": 791, "beforeText": "rect, first-hand emotional experience. \nTo briefly touch upon my objective view of the film: as a biopic, Forrest Gump \nportrays its protagonist with ", "extractionText": "enough detail and charm to make him genuinely likeable \nand relatable", "afterText": ". The film cleverly integrates major U.S. historical events, adding a sense \nof time and entertainment value. It makes Gump feel like someone we might", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">its protagonist</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Positive</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">genuinely likeable and relatable</span>}</div>"}, {"index": 2, "class": "audience_impact", "text": "make him genuinely likeable and relatable", "color": "#D2E3FC", "startPos": 749, "endPos": 791, "beforeText": "experience. \nTo briefly touch upon my objective view of the film: as a biopic, Forrest Gump \nportrays its protagonist with enough detail and charm to ", "extractionText": "make him genuinely likeable \nand relatable", "afterText": ". The film cleverly integrates major U.S. historical events, adding a sense \nof time and entertainment value. It makes Gump feel like someone we might", "attributesHtml": "<div><strong>class:</strong> audience_impact</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">emotion_evoked</span>: <span class=\"lx-attr-value\">empathy, connection</span>, <span class=\"lx-attr-key\">causal_element</span>: <span class=\"lx-attr-value\">The protagonist&#x27;s portrayal</span>, <span class=\"lx-attr-key\">target_audience</span>: <span class=\"lx-attr-value\">the audience</span>}</div>"}, {"index": 3, "class": "opinion_statement", "text": "cleverly integrates major U.S. historical events, adding a sense of time and entertainment value", "color": "#C8E6C9", "startPos": 802, "endPos": 899, "beforeText": "of the film: as a biopic, Forrest Gump \nportrays its protagonist with enough detail and charm to make him genuinely likeable \nand relatable. The film ", "extractionText": "cleverly integrates major U.S. historical events, adding a sense \nof time and entertainment value", "afterText": ". It makes Gump feel like someone we might actually \nknow\u2014someone experiencing this absurd yet authentic reality just as we do. The \npassage of time h", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">The film</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Positive</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">cleverly integrates major U.S. historical events</span>}</div>"}, {"index": 4, "class": "audience_impact", "text": "adding a sense of time and entertainment value", "color": "#D2E3FC", "startPos": 852, "endPos": 899, "beforeText": "ts protagonist with enough detail and charm to make him genuinely likeable \nand relatable. The film cleverly integrates major U.S. historical events, ", "extractionText": "adding a sense \nof time and entertainment value", "afterText": ". It makes Gump feel like someone we might actually \nknow\u2014someone experiencing this absurd yet authentic reality just as we do. The \npassage of time h", "attributesHtml": "<div><strong>class:</strong> audience_impact</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">emotion_evoked</span>: <span class=\"lx-attr-value\">engaged, informed</span>, <span class=\"lx-attr-key\">causal_element</span>: <span class=\"lx-attr-value\">Integration of historical events</span>, <span class=\"lx-attr-key\">target_audience</span>: <span class=\"lx-attr-value\">the audience</span>}</div>"}, {"index": 5, "class": "opinion_statement", "text": "makes Gump feel like someone we might actually know", "color": "#C8E6C9", "startPos": 904, "endPos": 956, "beforeText": "him genuinely likeable \nand relatable. The film cleverly integrates major U.S. historical events, adding a sense \nof time and entertainment value. It ", "extractionText": "makes Gump feel like someone we might actually \nknow", "afterText": "\u2014someone experiencing this absurd yet authentic reality just as we do. The \npassage of time has not dimmed the brilliance of Forrest Gump; the care pu", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">It</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Positive</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">feel like someone we might actually know</span>}</div>"}, {"index": 6, "class": "audience_impact", "text": "makes Gump feel like someone we might actually know", "color": "#D2E3FC", "startPos": 904, "endPos": 956, "beforeText": "him genuinely likeable \nand relatable. The film cleverly integrates major U.S. historical events, adding a sense \nof time and entertainment value. It ", "extractionText": "makes Gump feel like someone we might actually \nknow", "afterText": "\u2014someone experiencing this absurd yet authentic reality just as we do. The \npassage of time has not dimmed the brilliance of Forrest Gump; the care pu", "attributesHtml": "<div><strong>class:</strong> audience_impact</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">emotion_evoked</span>: <span class=\"lx-attr-value\">relatability, connection</span>, <span class=\"lx-attr-key\">causal_element</span>: <span class=\"lx-attr-value\">The film&#x27;s portrayal of Gump</span>, <span class=\"lx-attr-key\">target_audience</span>: <span class=\"lx-attr-value\">the audience</span>}</div>"}, {"index": 7, "class": "opinion_statement", "text": "The passage of time has not dimmed the brilliance of Forrest Gump", "color": "#C8E6C9", "startPos": 1027, "endPos": 1093, "beforeText": "nd entertainment value. It makes Gump feel like someone we might actually \nknow\u2014someone experiencing this absurd yet authentic reality just as we do. ", "extractionText": "The \npassage of time has not dimmed the brilliance of Forrest Gump", "afterText": "; the care put into the \nplot and dialogue by the screenwriter and director ensures that this 20-year-old film \nstill shines brightly today. \nHaving c", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">Forrest Gump</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Positive</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">not dimmed the brilliance</span>}</div>"}, {"index": 8, "class": "opinion_statement", "text": "the care put into the plot and dialogue by the screenwriter and director ensures that this 20-year-old film still shines brightly today", "color": "#C8E6C9", "startPos": 1095, "endPos": 1232, "beforeText": "ually \nknow\u2014someone experiencing this absurd yet authentic reality just as we do. The \npassage of time has not dimmed the brilliance of Forrest Gump; ", "extractionText": "the care put into the \nplot and dialogue by the screenwriter and director ensures that this 20-year-old film \nstill shines brightly today", "afterText": ". \nHaving covered the objective aspects, I want to share my most intuitive feelings. In \nthe straightforward narrative, Gump\u2019s life seems filled with ", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">the plot and dialogue</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Positive</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">still shines brightly</span>}</div>"}, {"index": 9, "class": "audience_impact", "text": "still shines brightly today", "color": "#D2E3FC", "startPos": 1205, "endPos": 1232, "beforeText": " dimmed the brilliance of Forrest Gump; the care put into the \nplot and dialogue by the screenwriter and director ensures that this 20-year-old film \n", "extractionText": "still shines brightly today", "afterText": ". \nHaving covered the objective aspects, I want to share my most intuitive feelings. In \nthe straightforward narrative, Gump\u2019s life seems filled with ", "attributesHtml": "<div><strong>class:</strong> audience_impact</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">emotion_evoked</span>: <span class=\"lx-attr-value\">appreciation, admiration</span>, <span class=\"lx-attr-key\">causal_element</span>: <span class=\"lx-attr-value\">The care put into the plot and dialogue</span>, <span class=\"lx-attr-key\">target_audience</span>: <span class=\"lx-attr-value\">the audience</span>}</div>"}, {"index": 10, "class": "opinion_statement", "text": "Gump\u2019s life seems filled with explosive events", "color": "#C8E6C9", "startPos": 1352, "endPos": 1398, "beforeText": "m \nstill shines brightly today. \nHaving covered the objective aspects, I want to share my most intuitive feelings. In \nthe straightforward narrative, ", "extractionText": "Gump\u2019s life seems filled with explosive events", "afterText": ". Yet, in \nGump&#x27;s eyes, these are simply part of his consistent attitude toward life\u2014an attitude \nhe holds for decades. This is something we can refle", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">Gump\u2019s life</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Neutral</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">filled with explosive events</span>}</div>"}, {"index": 11, "class": "audience_impact", "text": "This is something we can reflect upon for ourselves", "color": "#D2E3FC", "startPos": 1518, "endPos": 1569, "beforeText": "s filled with explosive events. Yet, in \nGump&#x27;s eyes, these are simply part of his consistent attitude toward life\u2014an attitude \nhe holds for decades. ", "extractionText": "This is something we can reflect upon for ourselves", "afterText": ": choose \nwith your heart and walk steadily forward, and the world will eventually open a path \nfor you. \nThat Gump possesses such a positive philosop", "attributesHtml": "<div><strong>class:</strong> audience_impact</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">emotion_evoked</span>: <span class=\"lx-attr-value\">reflection, inspiration</span>, <span class=\"lx-attr-key\">causal_element</span>: <span class=\"lx-attr-value\">Gump&#x27;s attitude toward life</span>, <span class=\"lx-attr-key\">target_audience</span>: <span class=\"lx-attr-value\">the audience</span>}</div>"}, {"index": 12, "class": "opinion_statement", "text": "Gump possesses such a positive philosophy of life", "color": "#C8E6C9", "startPos": 1680, "endPos": 1729, "beforeText": "thing we can reflect upon for ourselves: choose \nwith your heart and walk steadily forward, and the world will eventually open a path \nfor you. \nThat ", "extractionText": "Gump possesses such a positive philosophy of life", "afterText": " is inseparable from his \nmother&#x27;s upbringing. This was my most profound realization upon rewatching the \nmovie years later. I believe that as we grow", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">Gump</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Positive</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">positive philosophy of life</span>}</div>"}, {"index": 13, "class": "opinion_statement", "text": "This was my most profound realization upon rewatching the movie years later", "color": "#C8E6C9", "startPos": 1776, "endPos": 1852, "beforeText": "the world will eventually open a path \nfor you. \nThat Gump possesses such a positive philosophy of life is inseparable from his \nmother&#x27;s upbringing. ", "extractionText": "This was my most profound realization upon rewatching the \nmovie years later", "afterText": ". I believe that as we grow older, we become increasingly aware of \nhow much family education influences an individual. If Gump\u2019s mother had viewed \nh", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">The influence of family education</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Positive</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">most profound realization</span>}</div>"}, {"index": 14, "class": "audience_impact", "text": "we become increasingly aware of how much family education influences an individual", "color": "#D2E3FC", "startPos": 1887, "endPos": 1970, "beforeText": "parable from his \nmother&#x27;s upbringing. This was my most profound realization upon rewatching the \nmovie years later. I believe that as we grow older, ", "extractionText": "we become increasingly aware of \nhow much family education influences an individual", "afterText": ". If Gump\u2019s mother had viewed \nhim as a burden, constantly belittled him, or deemed him unfit for society, his spirit \nwould have gradually withered i", "attributesHtml": "<div><strong>class:</strong> audience_impact</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">emotion_evoked</span>: <span class=\"lx-attr-value\">understanding, awareness</span>, <span class=\"lx-attr-key\">causal_element</span>: <span class=\"lx-attr-value\">Gump&#x27;s mother&#x27;s upbringing</span>, <span class=\"lx-attr-key\">target_audience</span>: <span class=\"lx-attr-value\">the audience</span>}</div>"}, {"index": 15, "class": "opinion_statement", "text": "Forrest Gump is undoubtedly a masterclass in storytelling", "color": "#C8E6C9", "startPos": 2261, "endPos": 2318, "beforeText": "ithered in the gloom of childhood, regardless of his natural \naptitude. A withered soul struggles to even nurture itself, let alone achieve success. \n", "extractionText": "Forrest Gump is undoubtedly a masterclass in storytelling", "afterText": ". It depicts a life that is \ninspirational, entertaining, and full of drama\u2014a high-quality film that is both popular\n&quot;&quot;&quot;\n\n**Page 2**\n&quot;&quot;&quot;\nwith audience", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">Forrest Gump</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Positive</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">masterclass in storytelling</span>}</div>"}, {"index": 16, "class": "opinion_statement", "text": "It depicts a life that is inspirational, entertaining, and full of drama", "color": "#C8E6C9", "startPos": 2320, "endPos": 2393, "beforeText": "l \naptitude. A withered soul struggles to even nurture itself, let alone achieve success. \nForrest Gump is undoubtedly a masterclass in storytelling. ", "extractionText": "It depicts a life that is \ninspirational, entertaining, and full of drama", "afterText": "\u2014a high-quality film that is both popular\n&quot;&quot;&quot;\n\n**Page 2**\n&quot;&quot;&quot;\nwith audiences and educational. However, from my perspective, I couldn&#x27;t help but \nhave ", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">The life depicted in Forrest Gump</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Positive</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">inspirational, entertaining, and full of drama</span>}</div>"}, {"index": 17, "class": "opinion_statement", "text": "a high-quality film that is both popular with audiences and educational", "color": "#C8E6C9", "startPos": 2394, "endPos": 2434, "beforeText": "chieve success. \nForrest Gump is undoubtedly a masterclass in storytelling. It depicts a life that is \ninspirational, entertaining, and full of drama\u2014", "extractionText": "a high-quality film that is both popular", "afterText": "\n&quot;&quot;&quot;\n\n**Page 2**\n&quot;&quot;&quot;\nwith audiences and educational. However, from my perspective, I couldn&#x27;t help but \nhave some new thoughts. Jenny, as a supporting", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">The film</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Positive</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">high-quality, popular, educational</span>}</div>"}, {"index": 18, "class": "opinion_statement", "text": "I feel the screenwriter was somewhat lazy in characterizing Jenny", "color": "#C8E6C9", "startPos": 2738, "endPos": 2804, "beforeText": "racter, appears with a frequency \nthat makes her impossible to ignore, even if we aren&#x27;t meant to focus too heavily on \nher movements. Based on this, ", "extractionText": "I feel the screenwriter was somewhat lazy in \ncharacterizing Jenny", "afterText": ". She acts merely as a synchronized character in a parallel \ntimeline; her growth has limited relevance to Gump, yet she always appears exactly \nwhen ", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">The screenwriter&#x27;s characterization of Jenny</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Negative</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">somewhat lazy</span>}</div>"}, {"index": 19, "class": "opinion_statement", "text": "She acts merely as a synchronized character in a parallel timeline; her growth has limited relevance to Gump, yet she always appears exactly when Gump \"needs\" her", "color": "#C8E6C9", "startPos": 2806, "endPos": 2970, "beforeText": "e, even if we aren&#x27;t meant to focus too heavily on \nher movements. Based on this, I feel the screenwriter was somewhat lazy in \ncharacterizing Jenny. ", "extractionText": "She acts merely as a synchronized character in a parallel \ntimeline; her growth has limited relevance to Gump, yet she always appears exactly \nwhen Gump &quot;needs&quot; her", "afterText": ". Although it feels like the writer tried to give Jenny multiple \nfacets while keeping her gentle, there is an unavoidable suspicion that she was used", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">Jenny&#x27;s characterization</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Negative</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">limited relevance, appears exactly when Gump needs her</span>}</div>"}, {"index": 20, "class": "opinion_statement", "text": "there is an unavoidable suspicion that she was used merely as a \"plot device\"", "color": "#C8E6C9", "startPos": 3069, "endPos": 3146, "beforeText": "t she always appears exactly \nwhen Gump &quot;needs&quot; her. Although it feels like the writer tried to give Jenny multiple \nfacets while keeping her gentle, ", "extractionText": "there is an unavoidable suspicion that she was used \nmerely as a &quot;plot device", "afterText": ".&quot; \nThis inference stems from the scene where Jenny bears Gump\u2019s child. I wonder if the \nscreenwriter felt Gump had to have a child for the story to b", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">Jenny&#x27;s characterization</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Negative</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">used merely as a &#x27;plot device&#x27;</span>}</div>"}, {"index": 21, "class": "opinion_statement", "text": "I consider this a rather confusing storyline within the movie", "color": "#C8E6C9", "startPos": 3450, "endPos": 3512, "beforeText": "mplete, thus requiring \nJenny to &quot;complete the assignment&quot; with Gump at the last moment. The intention to \nforce a happy ending felt a bit excessive; ", "extractionText": "I consider this a rather confusing storyline \nwithin the movie", "afterText": ". \nAnother point that bothered me was the scene where Gump&#x27;s mother engages in a \nsexual transaction with the principal to get Gump into school. I pon", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">The storyline of Jenny bearing Gump&#x27;s child</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Negative</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">confusing storyline</span>}</div>"}, {"index": 22, "class": "opinion_statement", "text": "I still don't quite understand its significance", "color": "#C8E6C9", "startPos": 3657, "endPos": 3658, "beforeText": "movie. \nAnother point that bothered me was the scene where Gump&#x27;s mother engages in a \nsexual transaction with the principal to get Gump into school. ", "extractionText": "I", "afterText": " pondered this for a \nlong time and still don&#x27;t quite understand its significance. Aside from dark humor or \nhighlighting the mother&#x27;s sacrifice (?), ", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">The significance of the scene where Gump&#x27;s mother engages in a sexual transaction with the principal</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Negative</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">don&#x27;t quite understand its significance</span>}</div>"}, {"index": 23, "class": "opinion_statement", "text": "I fail to see any deeper meaning", "color": "#C8E6C9", "startPos": 3808, "endPos": 3840, "beforeText": " pondered this for a \nlong time and still don&#x27;t quite understand its significance. Aside from dark humor or \nhighlighting the mother&#x27;s sacrifice (?), ", "extractionText": "I fail to see any deeper meaning", "afterText": ". As a female \nviewer, watching such a depiction felt somewhat off-putting (uncomfortable). \nHowever, the flaws do not obscure the jade\u2014I don&#x27;t feel i", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">The scene where Gump&#x27;s mother engages in a sexual transaction with the principal</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Negative</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">fail to see any deeper meaning</span>}</div>"}, {"index": 24, "class": "audience_impact", "text": "watching such a depiction felt somewhat off-putting (uncomfortable)", "color": "#D2E3FC", "startPos": 3863, "endPos": 3929, "beforeText": "nderstand its significance. Aside from dark humor or \nhighlighting the mother&#x27;s sacrifice (?), I fail to see any deeper meaning. As a female \nviewer, ", "extractionText": "watching such a depiction felt somewhat off-putting (uncomfortable", "afterText": "). \nHowever, the flaws do not obscure the jade\u2014I don&#x27;t feel it ruined the entire movie. \nThese are my thoughts on Forrest Gump. I believe this film wi", "attributesHtml": "<div><strong>class:</strong> audience_impact</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">emotion_evoked</span>: <span class=\"lx-attr-value\">uncomfortable</span>, <span class=\"lx-attr-key\">causal_element</span>: <span class=\"lx-attr-value\">The scene where Gump&#x27;s mother engages in a sexual transaction with the principal</span>, <span class=\"lx-attr-key\">target_audience</span>: <span class=\"lx-attr-value\">a female viewer</span>}</div>"}, {"index": 25, "class": "opinion_statement", "text": "flaws do not obscure the jade", "color": "#C8E6C9", "startPos": 3946, "endPos": 3975, "beforeText": "rifice (?), I fail to see any deeper meaning. As a female \nviewer, watching such a depiction felt somewhat off-putting (uncomfortable). \nHowever, the ", "extractionText": "flaws do not obscure the jade", "afterText": "\u2014I don&#x27;t feel it ruined the entire movie. \nThese are my thoughts on Forrest Gump. I believe this film will continue to influence \npeople deeply in the", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">The film</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Positive</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">flaws do not obscure the jade</span>}</div>"}, {"index": 26, "class": "opinion_statement", "text": "I don't feel it ruined the entire movie", "color": "#C8E6C9", "startPos": 3976, "endPos": 4015, "beforeText": "deeper meaning. As a female \nviewer, watching such a depiction felt somewhat off-putting (uncomfortable). \nHowever, the flaws do not obscure the jade\u2014", "extractionText": "I don&#x27;t feel it ruined the entire movie", "afterText": ". \nThese are my thoughts on Forrest Gump. I believe this film will continue to influence \npeople deeply in the future. It is well worth watching when ", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">The film</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Positive</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">don&#x27;t feel it ruined the entire movie</span>}</div>"}, {"index": 27, "class": "opinion_statement", "text": "will continue to influence people deeply in the future", "color": "#C8E6C9", "startPos": 4077, "endPos": 4132, "beforeText": "le). \nHowever, the flaws do not obscure the jade\u2014I don&#x27;t feel it ruined the entire movie. \nThese are my thoughts on Forrest Gump. I believe this film ", "extractionText": "will continue to influence \npeople deeply in the future", "afterText": ". It is well worth watching when you need strength. We are \nall ordinary people; excessive &quot;chicken soup&quot; (motivational platitudes) can make us \nlose ", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">This film</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Positive</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">influence people deeply</span>}</div>"}, {"index": 28, "class": "opinion_statement", "text": "well worth watching", "color": "#C8E6C9", "startPos": 4140, "endPos": 4159, "beforeText": "t ruined the entire movie. \nThese are my thoughts on Forrest Gump. I believe this film will continue to influence \npeople deeply in the future. It is ", "extractionText": "well worth watching", "afterText": " when you need strength. We are \nall ordinary people; excessive &quot;chicken soup&quot; (motivational platitudes) can make us \nlose our way, but a story told g", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">The film</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Positive</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">well worth watching</span>}</div>"}, {"index": 29, "class": "opinion_statement", "text": "a story told gently and calmly takes root in our hearts and endures endlessly", "color": "#C8E6C9", "startPos": 4295, "endPos": 4373, "beforeText": "worth watching when you need strength. We are \nall ordinary people; excessive &quot;chicken soup&quot; (motivational platitudes) can make us \nlose our way, but ", "extractionText": "a story told gently and calmly takes root in our hearts and endures \nendlessly", "afterText": ". Forrest Gump is exactly that kind of movie. \n \nReferences \nLin, Shiyu. &quot;\u6b77\u4e45\u5f4c\u65b0\u7684\u611f\u52d5\uff1a\u300a\u963f\u7518\u6b63\u50b3\u300b\u89c0\u5f8c\u611f&quot; [A Timeless and Moving \nExperience: Thoughts on Forrest G", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">A story</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Positive</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">takes root in our hearts and endures endlessly</span>}</div>"}, {"index": 30, "class": "opinion_statement", "text": "is exactly that kind of movie", "color": "#C8E6C9", "startPos": 4388, "endPos": 4417, "beforeText": "(motivational platitudes) can make us \nlose our way, but a story told gently and calmly takes root in our hearts and endures \nendlessly. Forrest Gump ", "extractionText": "is exactly that kind of movie", "afterText": ". \n \nReferences \nLin, Shiyu. &quot;\u6b77\u4e45\u5f4c\u65b0\u7684\u611f\u52d5\uff1a\u300a\u963f\u7518\u6b63\u50b3\u300b\u89c0\u5f8c\u611f&quot; [A Timeless and Moving \nExperience: Thoughts on Forrest Gump]. Vocus, 14 Sep. 2023, \nhttps://vocus.cc", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">Forrest Gump</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Positive</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">exactly that kind of movie</span>}</div>"}];
+        let currentIndex = 0;
+        let isPlaying = false;
+        let animationInterval = null;
+        let animationSpeed = 1.0;
+
+        function updateDisplay() {
+          const extraction = extractions[currentIndex];
+          if (!extraction) return;
+
+          document.getElementById('attributesContainer').innerHTML = extraction.attributesHtml;
+          document.getElementById('entityInfo').textContent = (currentIndex + 1) + '/' + extractions.length;
+          document.getElementById('posInfo').textContent = '[' + extraction.startPos + '-' + extraction.endPos + ']';
+          document.getElementById('progressSlider').value = currentIndex;
+
+          const playBtn = document.querySelector('.lx-control-btn');
+          if (playBtn) playBtn.textContent = isPlaying ? '⏸ Pause' : '▶️ Play';
+
+          const prevHighlight = document.querySelector('.lx-text-window .lx-current-highlight');
+          if (prevHighlight) prevHighlight.classList.remove('lx-current-highlight');
+          const currentSpan = document.querySelector('.lx-text-window span[data-idx="' + currentIndex + '"]');
+          if (currentSpan) {
+            currentSpan.classList.add('lx-current-highlight');
+            currentSpan.scrollIntoView({block: 'center', behavior: 'smooth'});
+          }
+        }
+
+        function nextExtraction() {
+          currentIndex = (currentIndex + 1) % extractions.length;
+          updateDisplay();
+        }
+
+        function prevExtraction() {
+          currentIndex = (currentIndex - 1 + extractions.length) % extractions.length;
+          updateDisplay();
+        }
+
+        function jumpToExtraction(index) {
+          currentIndex = parseInt(index);
+          updateDisplay();
+        }
+
+        function playPause() {
+          if (isPlaying) {
+            clearInterval(animationInterval);
+            isPlaying = false;
+          } else {
+            animationInterval = setInterval(nextExtraction, animationSpeed * 1000);
+            isPlaying = true;
+          }
+          updateDisplay();
+        }
+
+        window.playPause = playPause;
+        window.nextExtraction = nextExtraction;
+        window.prevExtraction = prevExtraction;
+        window.jumpToExtraction = jumpToExtraction;
+
+        updateDisplay();
+      })();
+    </script>
